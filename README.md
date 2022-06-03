@@ -1,16 +1,5 @@
 # stopsmoking
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+A project for me to help me stop smoking, this will be a collection of the things that worked for me.
+I hope as many people as posible also get some use out of this app.
+Everyone is welcome to suggest changes to this app but bear with me i'm new to flutter and have 0 years of development experience.
