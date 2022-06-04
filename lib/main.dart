@@ -11,7 +11,7 @@ void main() {
       routes: {
         '/': (context) => const Homescreen(),
         '/second': (context) => const Flashing(),
-        '/thirt': (context) => const Settings(),
+        //'/thirt': (context) => const Settings(),
       },
     ),
   );
@@ -23,7 +23,7 @@ class Homescreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(children: [
       Container(
-        height: 667,
+        height: MediaQuery.of(context).size.width,
         width: 500,
         child: Scaffold(
           appBar: AppBar(
@@ -36,13 +36,14 @@ class Homescreen extends StatelessWidget {
                 onPressed: () {
                   Navigator.pushNamed(context, '/second');
                 },
-                child: const Text('Flashing screen'),
+                child: const Text('Waiting time'),
               ),
-              FloatingActionButton(
-                  child: const Icon(Icons.settings),
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/thirt');
-                  })
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/thirt');
+                },
+                child: const Text('settings'),
+              ),
             ],
           )),
         ),
@@ -98,42 +99,5 @@ class _FlashingState extends State<Flashing> {
             alignment: Alignment.center,
           )),
         ));
-  }
-}
-
-class Settings extends StatefulWidget {
-  const Settings({key});
-  @override
-  State<Settings> createState() => _SettingsState();
-}
-
-class _SettingsState extends State<Settings> {
-  @override
-  Widget build(BuildContext context) {
-    return Column(children: [
-      Container(
-        height: 667,
-        width: 500,
-        child: Scaffold(
-          appBar: AppBar(
-            title: const Text('Settings'),
-          ),
-          body: Center(
-              child: Column(
-            children: [
-              const Text("Safemode"),
-              Switch(
-                value: safemode,
-                onChanged: (value) {
-                  setState(() {
-                    safemode = value;
-                  });
-                },
-              ),
-            ],
-          )),
-        ),
-      )
-    ]);
   }
 }
