@@ -20,6 +20,8 @@ class Homescreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: MediaQuery.of(context).size.width,
+      width: MediaQuery.of(context).size.height,
       child: Scaffold(
         appBar: AppBar(
           title: Text("Home Screen"),
