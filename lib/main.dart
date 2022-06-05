@@ -10,7 +10,7 @@ void main() {
       routes: {
         '/': (context) => const Homescreen(),
         '/settings': (context) => const settings(),
-        '/timer': (context) => const timer(),
+        '/timer': (context) => timer(),
       },
     ),
   );
