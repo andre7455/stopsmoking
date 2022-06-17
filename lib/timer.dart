@@ -27,7 +27,7 @@ class _timerState extends State<timer> {
                 Text(second.toString()),
                 ElevatedButton(
                   onPressed: () {
-                    setState(() {});
+                    scheduleTimeout(5 * 1000);
                   },
                   child: const Text('Waiting time'),
                 ),
@@ -35,23 +35,14 @@ class _timerState extends State<timer> {
             ))));
   }
 }
-/*
-height: MediaQuery.of(context).size.width,
-        width: MediaQuery.of(context).size.height,
-        child: Scaffold(
-            appBar: AppBar(
-              title: Text(second.toString()),
-            ),
-            body: Center(
-                child: Column(
-              children: [
-                Text(second.toString()),
-                ElevatedButton(
-                  onPressed: () {
-                    second = second - 1;
-                  },
-                  child: const Text('Waiting time'),
-                ),
-              ],
-            )))
-*/
+
+void main() {
+  // 5 seconds.
+}
+
+Timer scheduleTimeout([int milliseconds = 10000]) =>
+    Timer(Duration(milliseconds: milliseconds), handleTimeout);
+
+void handleTimeout() {
+  second = second + 1;
+}
