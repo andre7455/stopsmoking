@@ -27,7 +27,7 @@ class _timerState extends State<timer> {
                 Text(second.toString()),
                 ElevatedButton(
                   onPressed: () {
-                    scheduleTimeout(5 * 1000);
+                    scheduleTimeout(1 * 1000);
                   },
                   child: const Text('Waiting time'),
                 ),
@@ -36,13 +36,8 @@ class _timerState extends State<timer> {
   }
 }
 
-void main() {
-  // 5 seconds.
-}
-
 Timer scheduleTimeout([int milliseconds = 10000]) =>
     Timer(Duration(milliseconds: milliseconds), handleTimeout);
-
 void handleTimeout() {
   second = second + 1;
 }
