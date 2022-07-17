@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+//importing my own pages
 import 'timer.dart';
 import 'settings.dart';
 import 'home.dart';
@@ -11,7 +12,7 @@ void main() {
       routes: {
         '/': (context) => const Homescreen(),
         '/settings': (context) => const settings(),
-        '/timer': (context) => timer(),
+        '/timer': (context) => StopWatchTimerPage(),
       },
     ),
   );
