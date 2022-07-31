@@ -1,7 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:stopsmoking/home.dart';
-import 'main.dart';
+import 'storage.dart';
 
 class StopWatchTimerPage extends StatefulWidget {
   @override
@@ -9,7 +8,7 @@ class StopWatchTimerPage extends StatefulWidget {
 }
 
 class _StopWatchTimerPageState extends State<StopWatchTimerPage> {
-  static const countdownDuration = Duration(minutes: 15);
+  static const countdownDuration = Duration(minutes: waitingTimeMinutes);
   Duration duration = Duration();
   Timer? timer;
 
@@ -56,7 +55,7 @@ class _StopWatchTimerPageState extends State<StopWatchTimerPage> {
   Widget build(BuildContext context) => Scaffold(
         backgroundColor: Color.fromARGB(0, 0, 0, 0),
         appBar: AppBar(
-          title: Text("Timer Timer Demo"),
+          title: Text("Waiting timer"),
         ),
         body: Center(
           child: Column(
