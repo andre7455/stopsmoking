@@ -8,7 +8,7 @@ class StopWatchTimerPage extends StatefulWidget {
 }
 
 class _StopWatchTimerPageState extends State<StopWatchTimerPage> {
-  static const countdownDuration = Duration(minutes: waitingTimeMinutes);
+  var countdownDuration = Duration(minutes: waitingTimeMinutes);
   Duration duration = Duration();
   Timer? timer;
 
@@ -35,7 +35,7 @@ class _StopWatchTimerPageState extends State<StopWatchTimerPage> {
   void addTime() {
     final addSeconds = countDown ? -1 : 1;
     setState(() {
-      final seconds = duration.inSeconds + addSeconds;
+      int seconds = duration.inSeconds + addSeconds;
       if (seconds < 0) {
         timer?.cancel();
       } else {

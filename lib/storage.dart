@@ -1,1 +1,1 @@
-const int waitingTimeMinutes = 14;
+int waitingTimeMinutes = 5;
