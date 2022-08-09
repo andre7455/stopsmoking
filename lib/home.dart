@@ -26,6 +26,12 @@ class Homescreen extends StatelessWidget {
               },
               child: const Text('settings'),
             ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/example');
+              },
+              child: const Text('example'),
+            ),
           ],
         )),
       ),

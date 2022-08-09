@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'timer.dart';
 import 'settings.dart';
 import 'home.dart';
+import 'example.dart';
 
 void main() {
   runApp(
@@ -13,6 +14,7 @@ void main() {
         '/': (context) => const Homescreen(),
         '/settings': (context) => const settings(),
         '/timer': (context) => StopWatchTimerPage(),
+        '/example'; (context) => const MyApp(),
       },
     ),
   );
