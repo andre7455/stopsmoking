@@ -19,7 +19,6 @@ class example extends StatelessWidget {
 
 class SharedPreferencesDemo extends StatefulWidget {
   const SharedPreferencesDemo({Key? key}) : super(key: key);
-
   @override
   SharedPreferencesDemoState createState() => SharedPreferencesDemoState();
 }
@@ -28,10 +27,11 @@ class SharedPreferencesDemoState extends State<SharedPreferencesDemo> {
   final Future<SharedPreferences> _prefs = SharedPreferences.getInstance();
   late Future<int> _counter;
 
+//a function that handles the adding of a int
+//can rebuild this as a safe button
   Future<void> _incrementCounter() async {
     final SharedPreferences prefs = await _prefs;
     final int counter = (prefs.getInt('counter') ?? 0) + 1;
-
     setState(() {
       _counter = prefs.setInt('counter', counter).then((bool success) {
         return counter;
@@ -47,6 +47,7 @@ class SharedPreferencesDemoState extends State<SharedPreferencesDemo> {
     });
   }
 
+//ui bullshit
   @override
   Widget build(BuildContext context) {
     return Scaffold(
