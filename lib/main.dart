@@ -14,7 +14,7 @@ void main() {
         '/': (context) => const Homescreen(),
         '/settings': (context) => const settings(),
         '/timer': (context) => StopWatchTimerPage(),
-        '/example': (context) => const MyApp(),
+        '/example': (context) => const example(),
       },
     ),
   );
